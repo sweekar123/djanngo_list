@@ -1,0 +1,53 @@
+{% extends 'mysite/base.html' %}
+
+{% block content %}
+
+<form acton = "people_signin" method="POST" >
+    {% csrf_token %}
+
+  <div class="form-coloumn">
+    <div class="form-group col-md-6">
+      <label for="inputFirstname4">First Name</label>
+      <input type="text" name="first_name" class="form-control" id="inputFirstname4" placeholder="First Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputLastname4">Last Name</label>
+      <input type="text" name="last_name" class="form-control" id="inputLastname4" placeholder="Last Name" >
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputUsername4">Uername</label>
+      <input type="text" name="username" class="form-control" id="inputUsername4" placeholder="Username">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword14">Password</label>
+      <input type="password" name="password1" class="form-control" id="inputPassword4" placeholder="Password">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword214">Confirm Password</label>
+      <input type="password" name="password2" class="form-control" id="inputPassword24" placeholder="Confirm Password">
+    </div>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputAddress">Address</label>
+    <input type="text" name="address" class="form-control" id="inputAddress" placeholder="Address">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputAddress2">City</label>
+    <input type="text" name="city" class="form-control" id="inputAddress2" placeholder="City">
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Remember Password
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>
+
+{% endblock %}

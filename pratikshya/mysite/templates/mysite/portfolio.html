@@ -1,0 +1,33 @@
+{% extends 'mysite/base.html' %}
+{% block content %}
+{% load static %}
+<div class="container" style="margin-top: 100px" >
+<div class="card-deck">
+  <div class="card">
+    <img src="{% static 'mysite/images/django.jpeg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Django Developer</h5>
+      <p class="card-text">Working with Django framework past 2years on development of web application.</p>
+      <p class="card-text"><small class="text-muted">Updated recently</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'mysite/images/linux.jpeg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Linux admin</h5>
+      <p class="card-text"> Basics of the linux fundamentals and administration process . </p>
+      <p class="card-text"><small class="text-muted">Updated recently </small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'mysite/images/ard.jpeg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Developing Arduino Projects</h5>
+      <p class="card-text">Working on the development of small projects based on arduino</p>
+      <p class="card-text"><small class="text-muted">Updated recently</small></p>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

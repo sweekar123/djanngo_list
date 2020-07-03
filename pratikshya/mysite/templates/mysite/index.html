@@ -1,0 +1,47 @@
+{% extends 'mysite/base.html' %}
+
+
+{% block content %}
+<div class="container">
+<div class="row" style="margin-top: 100px" >
+<div class="col-nm-6">	
+ <div class="alert alert-dark" role="alert">
+   !!! Enter the Name and enjoy the joke !!!
+</div>
+
+<form class="form-inline"  action="{% url 'home' %}" method="POST">
+	{% csrf_token %}
+  <label class="sr-only" for="inlineFormInputName2">Name</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"
+  name="first_name" placeholder="First Name">
+
+  <label class="sr-only" for="inlineFormInputName2">Last Name</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" name="last_name" placeholder="Last Name">
+
+   <button type="submit" class="btn btn-secondary mb-2">Click for Joke</button>
+
+</form>
+</div>
+
+<div class="col-nm-6" >
+	<div class="row" style="margin-top: 50px" >
+	<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title">Chuck Norris Joke</h5>
+    <p class="card-text">{{ joke }}
+
+    </p>
+    <a href="{% url 'portfolio' %}" class="card-link">Check out Portfolio</a>
+    
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ 
+
+{% endblock %}
+
+
+  
